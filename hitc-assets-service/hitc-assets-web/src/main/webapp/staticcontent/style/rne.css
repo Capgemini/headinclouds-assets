@@ -1,0 +1,164 @@
+div#rne ul.process-overview 
+{
+  text-decoration:none;
+  clear:left; /* Firefox, Opera, Netscape */
+  text-align:right;
+  padding:.7em .3em .3em 0;  
+}
+
+div#rne ul.process-overview li
+{
+  float:left;
+  background:url(/images/register_arrow.gif) no-repeat center right;
+  padding-right: 15px;
+  margin-right: 0.5em;
+}
+
+div#rne ul.process-overview li.no-arrow
+{
+  background:none;
+}
+
+div#rne ul.process-overview li.no-arrow-selected
+{
+  background:none;
+}
+
+div#rne ul.process-overview li.no-arrow-selected span.step-name
+{
+  color: #000;
+}
+
+div#rne ul.process-overview li.no-arrow-selected div.step-item 
+{
+  background:url(/images/stepIndicator_active.gif) no-repeat top left;
+  color: #fff;
+}
+
+div#rne ul.process-overview li div.step-item 
+{
+  background:url(/images/stepIndicator_notActive.gif) no-repeat top left;
+  float:left;
+  width: 29px;
+  height: 29px;
+  text-align:center;
+  font-size:1.5em;
+  font-weight:bold;
+  line-height:29px;
+  margin: 0.12em 0.5em 0.12em 0;
+}
+
+div#rne ul.process-overview li.selected div.step-item 
+{
+  background:url(/images/stepIndicator_active.gif) no-repeat top left;
+  color: #fff;
+}
+
+div#rne ul.process-overview li.letter
+{
+  background:none;
+}
+
+div#rne ul.process-overview li.letter-selected
+{
+  background:none;
+}
+
+div#rne ul.process-overview li.letter div.step-item
+{
+  background:url(/images/registerEnvelope_notActive.gif) no-repeat top left;
+  width: 35px;
+  height: 30px;
+}
+
+div#rne ul.process-overview li.letter-selected div.step-item  
+{
+  background:url(/images/registerEnvelope_active.gif) no-repeat top left;
+  width: 35px;
+  height: 30px;
+}
+
+
+
+div#rne ul.process-overview li span.step-name
+{
+  padding: 0 0.5em;
+  display:block;
+  text-align:left;
+  color: #999;
+}
+
+div#rne ul.process-overview li.selected span.step-name
+{
+  color: #000;
+}
+
+div#rne ul.process-overview li.letter-selected span.step-name 
+{
+  color: #000;
+}
+
+/*Begin Using Service*/
+div#rne ul.process-overview li.useservice
+{
+  background:none;
+}
+
+div#rne ul.process-overview li.useservice-selected
+{
+  background:none;
+}
+
+
+div#rne ul.process-overview li.useservice div.step-item
+{
+  background:none;
+  width: 1px;
+  height: 30px;
+  float:left
+}
+
+div#rne ul.process-overview li.useservice-selected div.step-item  
+{
+  background:none;
+  width: 1px;
+  height: 30px;  
+}
+
+div#rne ul.process-overview li.useservice-selected span.step-name  
+{
+  color: #000;
+}
+
+div.error.large a
+{
+  color:#063;
+}
+
+/* Gateway Card */
+
+div#gateway-card 
+{
+  background:url(/images/GGWCard_blank.gif) no-repeat top left;
+  width: 160px;
+  height: 100px;
+  float:right;
+  text-align:center;
+  line-height:115px;
+  font-weight:bold;
+  
+}
+
+.portlet-body > div#rne, div#rne > ul /* FireFox */
+{
+  float:left;
+  width:100%;
+}
+
+div#rne + p /* FireFox */
+{
+  clear:left;
+}
+
+
+

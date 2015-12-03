@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The WebLogic specific deployment descriptor for this application. -->
+<weblogic-web-app xmlns="http://www.bea.com/ns/weblogic/90">
+
+	<description>WebLogic Server Specific Deployment Descriptor.</description>
+
+	<context-root></context-root>
+
+	<!-- Disable the automatic creation of a session by WebLogic Server. -->
+	<session-descriptor>
+		<tracking-enabled>false</tracking-enabled>
+		<cookies-enabled>false</cookies-enabled>
+		<url-rewriting-enabled>true</url-rewriting-enabled>
+		<encode-session-id-in-query-params>false</encode-session-id-in-query-params>
+	</session-descriptor>
+
+	<!-- Enable/Disable JSP re-loading depending on build mode. -->
+	<jsp-descriptor>
+		<page-check-seconds>@jsp.page.check.seconds@</page-check-seconds>
+	</jsp-descriptor>
+
+	<container-descriptor>
+		<servlet-reload-check-secs>-1</servlet-reload-check-secs>
+	</container-descriptor>
+	
+	<charset-params>
+      <input-charset>
+        <resource-path>/*</resource-path>
+        <java-charset-name>UTF-8</java-charset-name>
+      </input-charset>
+	</charset-params>
+	
+</weblogic-web-app>

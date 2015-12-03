@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Standard JEE web application deployment descriptor for this application. -->
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd">
+
+	<!-- Spring MVC applications usually have two ApplicationContexts configured in a parent-child relationship. The applicationContext.xml 
+		file contains the Spring bean definitions to be loaded into the root web application context by the Spring ContextLoaderListener. 
+		This will contain all of the non web specific beans. -->
+
+	<!-- The application context created by the ContextLoaderListener from the applicationContext.xml is the parent of any servlet-specific 
+		contexts meaning that its beans are automatically available in these child contexts. -->
+
+	<!-- The appropriate Spring 'profile' is activated by substituting the appropriate value into spring.profiles.active depending 
+		on the target deployment environment. This is expected to be achieved through the use of Maven profiles to set the value 
+		of spring.profiles.active at build-time. -->
+
+	<description>The HMRC portal web app for the HITC Assets Service.</description>
+	<display-name>HMRC HITC Assets Service - @spring.profiles.active@</display-name>
+
+	<!-- ========================== -->
+	<!-- Servlet Context Parameters -->
+	<!-- ========================== -->
+	<context-param>
+		<param-name>serviceSettingsKey</param-name>
+		<param-value>hmrc.portal.hitc</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/config/spring-beans/applicationContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>spring.profiles.active</param-name>
+		<param-value>@spring.profiles.active@</param-value>
+	</context-param>
+
+	<!-- =============== -->
+	<!-- Event Listeners -->
+	<!-- =============== -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>uk.gov.hmrc.portal.framework.web.ApplicationServletContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>uk.gov.hmrc.portal.framework.web.DefaultHttpSessionListener</listener-class>
+	</listener>
+
+	<!-- ======== -->
+	<!-- Servlets -->
+	<!-- ======== -->
+	<servlet>
+		<display-name>Front controller servlet for the HMRC HITC Service static content</display-name>
+		<servlet-name>HMRChitcstaticcontentServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config/spring-beans/hitcServlet-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	<!-- ================ -->
+	<!-- Servlet Mappings -->
+	<!-- ================ -->
+
+	<servlet-mapping>
+		<servlet-name>HMRChitcstaticcontentServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!-- ======= -->
+	<!-- Filters -->
+	<!-- ======= -->
+
+
+	<!-- =============== -->
+	<!-- Filter Mappings -->
+	<!-- =============== -->
+
+
+	<!-- ========== -->
+	<!-- JSP Config -->
+	<!-- ========== -->
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>*.jsp</url-pattern>
+      <el-ignored>false</el-ignored>
+      <page-encoding>UTF-8</page-encoding>      
+      <scripting-invalid>true</scripting-invalid>
+      <include-prelude>/WEB-INF/jsp/common/prelude.jspf</include-prelude>
+    </jsp-property-group>
+  </jsp-config>
+
+	<!-- ===================== -->
+	<!-- Error Page Directives -->
+	<!-- ===================== -->
+	<error-page>
+		<error-code>401</error-code>
+		<location>/handleAccessDenied</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/handleAccessDenied</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/handleNotFound</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/handleError</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/handleError</location>
+	</error-page>
+
+</web-app>

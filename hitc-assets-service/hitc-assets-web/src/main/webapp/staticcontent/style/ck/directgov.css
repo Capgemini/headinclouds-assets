@@ -1,0 +1,49 @@
+#header-directgov
+{
+	border-bottom:1px solid #666;
+	font-weight:bold;
+	float:left;
+	width:100%;
+}
+
+#header-directgov .logos
+{
+	background:#066 url(/images/directgov/background.gif) no-repeat top right;
+	float:left;
+	width:100%;
+	height:89px;
+	border-bottom:1px solid #666;
+}
+
+#header-directgov .logos img
+{
+	float:left;
+	margin:15px 0;
+}
+
+#header-directgov .logos img.affiliate
+{
+	float:right;
+	margin:27px 12px;
+}
+
+#header-directgov a
+{
+	color:#066;
+}
+
+#header-directgov .inline-navigation
+{
+	padding:.25em;
+	float:left;
+}
+
+#header-directgov .inline-navigation.return
+{
+	float:right;
+}
+
+#header-directgov .inline-navigation li
+{
+	border-color:#066;
+}

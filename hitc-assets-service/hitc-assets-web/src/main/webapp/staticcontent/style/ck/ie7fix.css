@@ -1,0 +1,280 @@
+/* Check boxes and radio buttons affect the line-height, making the text lower than the label. */
+.checkbox,
+.radio
+{
+	margin:0;
+}
+
+/* Index not rendered in a line */
+.index li
+{
+	display:inline;
+}
+/* Selected page rendered too high */
+.index.page-navigation li.selected
+{
+	margin-bottom:-8px;
+}
+
+/* Read-only-forms are not wrapping properly. */
+.read-only-form
+{
+	width:98%;
+	margin:.5em 0;
+	padding:0;
+	padding-top:1em;
+}
+.two-columns .read-only-form
+{
+	width:96%;
+}
+.read-only-form dt
+{
+	float:none;
+	display:inline-block;
+	margin-top:-.25em;
+}
+.read-only-form dd
+{
+	float:right;
+	clear:right;
+	margin-top:-1.25em;
+	margin-bottom:1em;
+	padding-left:1.33em;
+}
+
+/* Read only forms nested in currency forms */
+.currency .read-only-form dt
+{
+	margin-left:.25em;
+}
+
+
+/* Success & failure message needs padding */
+div.message
+{
+	padding-top:.75em;
+	padding-bottom:.75em;
+}
+
+
+/* Undo Opera Fix */
+#user-information
+{
+	width:auto;
+}
+
+
+/* general clearing issue with the + selector */
+div.columns > *,
+.process-overview > *,
+.field > *,
+div.calculation > *,
+.buttons > *
+{
+	clear:none;
+}
+div.columns,
+div.columns + p,
+.field + h3,
+.field + p,
+.portlet,
+fieldset.minimal,
+h2,
+h3,
+h4,
+.section,
+form.calculation,
+.index,
+.breadcrumb
+{
+	clear:both !important;
+}
+
+/* Large labels do not have enough space under them */
+form .field
+{
+	clear:both;
+}
+
+/* Question text is indented by 7px */
+legend .question
+{
+	left:-7px;
+}
+.field ul label /* Checkbox and radio button labels */
+{
+	/* Nice wrapping - the IE way */
+	display:inline-block;
+	margin-left:0;
+}
+
+.full-width .field ul li label
+{
+	display:inline-block;
+}
+
+/*
+	Subscript letters were overlapping keylines in h1 headings and being clipped
+	in form labels.
+*/
+sub
+{
+	vertical-align:baseline;
+	font-size:.9em;
+	position:relative;
+	top:2px;
+}
+
+/*
+	Menu item IE7 bug when there is whitespace in the HTML between menu item elements.
+*/
+#main-menu li li
+{
+	display:inline-block;
+}
+
+.buttons input
+{
+	overflow:visible;
+	padding:0 .75em;
+}
+
+/* Hint text in single-field form fields appears to the right of the field */
+.single-field .field
+{
+	position:relative;
+}
+.single-field .field .hint
+{
+	position:absolute;
+	left:0;
+	margin-top:1.75em;
+}
+
+/* Read-only-forms in currency fields are too wide */
+.currency .read-only-form
+{
+	margin-left:.25em;
+}
+
+/* Breadcrumb's image's are missing when wrapping */
+.breadcrumb li
+{
+	float:left;
+	white-space:nowrap;
+	background-position:0 .3em;
+	margin-left:.66em;
+}
+
+/* Portlets are too wide */
+.portlet {width:97%; margin-left:3%;}
+.two-columns .portlet {width:94%; margin-left:6% ;margin-right:-1%;}
+
+/* Columns are sometimes wrapping. */
+div.columns div.column
+{
+	margin-left:-1px;
+}
+
+div.columns.line-between div.column
+{
+	margin-left:0;
+}
+
+/* Columns are adjacent to previous columns */
+div.columns
+{
+	margin-bottom:1.5em;
+}
+
+/* IE7 Does not support border-radius */
+.portlet
+{
+	padding-top:0;
+	padding-right:0;
+	padding-bottom:1em;
+	border-bottom:1.5em solid transparent;
+}
+.portlet-header
+{
+	width:100%;
+	margin-top:0;
+	left:0;
+	padding-left:.2em;
+	margin-bottom:-1.6em;
+}
+.portlet-header h2
+{
+	padding-top:1px;
+}
+
+.portlet-header + .portlet-body
+{
+	padding-top:2.5em;
+}
+.portlet-body
+{
+	background:url(/images/corner.gif) no-repeat top right;
+	position:relative;
+	top:-1px;
+	right:-1px;
+	margin-top:0;
+	padding-top:2em;
+}
+.portlet-body > *
+{
+	padding-right:.25em;
+}
+/* Legacy HTML support */
+.no-title-bar .portlet-header + .portlet-body
+{
+	padding-top:.5em;
+}
+
+#main-menu > li:first-child
+{
+	background:#066 url(/images/corner.gif) no-repeat top right;
+}
+
+.process-overview dt
+{
+	border:none;
+	background:url(/images/processStepOff.gif) no-repeat;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+.process-overview dt.selected
+{
+	background-image:url(/images/processStepOn.gif); /* Assume selected image is same size as default */
+	color:#fff;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+
+.employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerEmployment.gif);}
+.self-employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerSelfEmployment.gif);}
+.partnership .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerPartnership.gif);}
+.property .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerProperty.gif);}
+.capital-gains .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCapitalGains.gif);}
+.foreign .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerForeign.gif);}
+.core .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCore.gif);}
+
+/* Digital header links */
+#header ul,
+#header-digital
+{
+	list-style:none; /* Remove bullets */
+}
+#header li,
+#header-digital li
+{
+	display:inline;
+}
+
+div.message.warning
+{
+	background-position:.5em 1em;
+}

@@ -1,0 +1,128 @@
+body
+{
+	width:80em;
+}
+
+efsstyle.BODY {	FONT-SIZE: 10pt! important; COLOR: black! important; FONT-FAMILY: Verdana! important; BACKGROUND-COLOR: white! important}
+efsstyle.table {width="100%";}
+efsstyle.H1 {	FONT-WEIGHT: normal; FONT-SIZE: 16pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-FAMILY: Verdana}
+efsstyle.H2 {	FONT-WEIGHT: normal; FONT-SIZE: 14pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-FAMILY: Verdana}
+efsstyle.H3 {	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-FAMILY: Verdana}
+efsstyle.H4 {	FONT-WEIGHT: bold; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-FAMILY: Arial}
+efsstyle.H5 {	FONT-WEIGHT: normal; FONT-SIZE: 12pt; MARGIN-BOTTOM: 0px; COLOR: black; FONT-STYLE: italic; FONT-FAMILY: Arial}
+efsstyle.ADDRESS {	FONT-SIZE: 10pt; FONT-STYLE: italic; FONT-FAMILY: Verdana}
+efsstyle.TD {	FONT-SIZE: 10pt}
+efsstyle.TH {	FONT-WEIGHT: bold; FONT-SIZE: 10pt}
+
+.RHS {	FONT-WEIGHT: bold; FONT-SIZE: 10pt; FONT-FAMILY: Arial; font-color: #B21313}
+.head1 {	FONT-WEIGHT: bold; WORD-SPACING: 0.4em; LINE-HEIGHT: 80%; text-decoration: none}
+.tag1 {	WORD-SPACING: 0.4em; LINE-HEIGHT: 110%; FONT-STYLE: italic}
+.news { WORD-SPACING: 0.4em; LINE-HEIGHT: 120%}
+.reverse {	COLOR: white}
+.windowsButton {  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif; font-size: 10pt; height: 23px; width: 125px; cursor: hand; clip:   rect(   )}
+.windowsEditBox {  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif; height: 22px}
+.groupHeading {  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif; font-weight: bold; color: #FFFFFF; font-size: 12pt}
+.windowsMultilineEditBox { font-family: Tahoma, "MS Sans Serif", Arial, sans-serif; clip:  rect(   )}
+.url {  text-decoration: none}
+.queryTable {  background-color: #FFFFCC; padding-top: 3px; padding-right: 3px; padding-bottom: 3px; padding-left: 3px}
+.resultsTable {  background-color: #CCCCCC; padding-top: 3px; padding-right: 1px; padding-bottom: 3px; padding-left: 1px}
+.tableSeparator {  font-family: Arial, Helvetica, sans-serif; font-style: normal; font-weight: bold; color: #FFFFFF; background-color: #000066}
+.formValue {  background-color: #FFFFFF; font-family: "Courier New", Courier, mono}
+.checkBoxReadOnly {  background-color: #FFFFFF; color: #000000}
+.formFieldLabel {  font-style: normal; font-weight: bold; color: #FFFFFF; background-color: #000000}
+.formValueClass1A {  font-family: "Courier New", Courier, mono; background-color: #EBC6C5}
+.p11dLabelTextSmall {  font-size: xx-small}
+.disabledTextField {  color: #000000; background-color: #FFFFFF}
+.infocell {
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 1px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 1px black solid;
+	FONT-SIZE: 8pt
+}
+.infonoborder {
+	FONT-SIZE: 8pt
+}
+.labelcell {
+	FONT-SIZE: 8pt
+; font-weight: bold
+}
+.totalslbl1 {
+	TEXT-ALIGN: center;
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 2px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 2px black solid;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	COLOR: #ffffff;
+	BACKGROUND-COLOR: #000000;	 
+}
+.totalsinfo1 {
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 2px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 2px black solid;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;	
+}	
+.totalslbl2 {
+	TEXT-ALIGN: center;
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 1px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 1px black solid;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #d7d8dc;	 
+}
+.totalsinfo2 {
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 1px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 1px black solid;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #d7d8dc;	 
+}
+.totalsblank {
+	BORDER-RIGHT: 1px black solid;
+	BORDER-TOP: 1px black solid;
+	BORDER-LEFT: 1px black solid;
+	BORDER-BOTTOM: 1px black solid;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #a3a4a8; 
+}
+.tabselected {
+	COLOR: white;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #00005e;
+	BORDER-RIGHT: 1px #00005e solid;
+	BORDER-TOP: 1px #00005e solid;
+	BORDER-LEFT: 1px #00005e solid;
+	CURSOR: hand;
+}
+.tabnotselected {
+	FONT-WEIGHT: bold;
+	COLOR: black;
+	BACKGROUND-COLOR: #d7d8dc;
+	BORDER-RIGHT: 1px #00005e solid;
+	BORDER-TOP: 1px #00005e solid;
+	BORDER-LEFT: 1px #00005e solid;
+	CURSOR: hand;
+}
+.headingcell {
+	COLOR: white;
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #00005e;
+	BORDER-RIGHT: 1px #00005e solid;
+	BORDER-bottom: 1px #00005e solid;
+	BORDER-LEFT: 1px #00005e solid;
+}
+.p12table1 {  background-color: #CCCCCC}
+.p12Totals {  font-weight: bold; color: #FFFFFF; background-color: #000000}
+.nowrapper {  nowrap: true}
+.appTitleZone {
+	width: 100%;
+}

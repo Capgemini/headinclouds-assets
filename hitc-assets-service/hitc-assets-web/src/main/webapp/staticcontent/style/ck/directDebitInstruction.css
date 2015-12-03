@@ -1,0 +1,75 @@
+.direct-debit
+{
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+.direct-debit h1
+{
+	float:left;
+	margin-left:0;
+	width:70%;
+	font-weight:bold;
+	font-size:1.33em;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.direct-debit p.address
+{
+	clear:none;
+	margin-right:1em;
+}
+
+.direct-debit img
+{
+	float:right;
+	margin-right:1.5em;
+}
+
+.direct-debit h2
+{
+	text-align:center;
+	font-size:1.1em;
+	margin-bottom:.25em;
+	padding-bottom:0;
+	clear:both;
+}
+
+.direct-debit p,
+.direct-debit dl.direct-debit-form
+{
+	margin-top:.25em;
+	margin-bottom:.25em;
+}
+
+.direct-debit dl.direct-debit-form dt
+{
+	width:100%;
+}
+
+.direct-debit dl.direct-debit-form dd
+{
+	border:1px solid #000;
+	margin:.25em 2em .5em 0;
+	padding:.25em .5em;
+}
+
+.direct-debit .direct-debit-guarantee
+{
+	clear:both;
+	border:1px solid #000;
+	padding:.5em .5em 0 .5em;
+	margin:1em 0;
+	height:100%;
+}
+
+.direct-debit .direct-debit-guarantee img
+{
+	margin-right:0;
+}
+
+.direct-debit .direct-debit-guarantee h2,
+.direct-debit .direct-debit-guarantee ul
+{
+	margin-top:0;
+}

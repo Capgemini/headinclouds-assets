@@ -1,0 +1,109 @@
+.odes-html ul li
+{
+	font-size: 1.43em;
+}
+
+div.portlet-body .odes-html ul li
+{
+  background:none;
+  padding-left:0em;
+}
+
+.positioned-messages
+{
+	position:relative;
+	height: 2.4em;
+}
+
+#issue-date-from-message
+{
+	position:absolute;
+	overflow:visible;
+	left:9em;
+	top: 1.2em;
+}
+
+#issue-date-to-message
+{
+	position:absolute;
+	overflow:visible;
+	left:28em;
+}
+
+div.date-value
+{
+	white-space:nowrap;
+}
+
+div.label
+{
+	padding-top:0.25em;
+	padding-right:0.25em;
+}
+
+.date-range-fields
+{
+	margin-bottom:1em;
+}
+
+.notice
+{
+	background-color:#CFC;
+}
+
+div.action-panel
+{
+	text-align:right;
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+div.action-panel form
+{
+	display:inline;
+}
+
+div.action-panel form .last
+{
+	margin-left:1em;
+}
+
+/* Specialised columns */
+
+div.columns div.column.column40
+{
+	width:40%;	
+}
+
+div.columns div.column.column60
+{
+	width:59%; /* IE */
+}
+
+div.columns div.column.column40,
+div.columns div.column.column60
+{
+	margin-right:-1px; /* IE */
+}
+
+div.columns div.columns-end
+{
+	clear:both;
+}
+
+div.portlet-body table.underlines th
+{
+  text-align:left;
+  color:#063;
+}
+
+.header
+{
+	color:#063;
+	font-size:1.2em;
+}
+
+.paragraph-content
+{
+	margin-right:1em;
+}

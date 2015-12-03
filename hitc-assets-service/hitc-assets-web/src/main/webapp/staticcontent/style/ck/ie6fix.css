@@ -1,0 +1,666 @@
+/* IE6 doesn't recognize the first-child psuedo class selector */
+#user-information dt,
+.inline-navigation li,
+.columns.line-between .column,
+.breadcrumb li,
+table.default.statement tbody tr td,
+.error p,
+.warning p,
+.information p
+{
+	1:expression(this.ie6css1 ? 1 : className += this == parentNode.firstChild ? ' ie6-first-child' : '');
+	2:expression(this.ie6css1 = 1);
+}
+
+/* IE6 doesn't recognize the child selector (>) */
+#main-menu li.submenu a
+{
+	1:expression(this.ie6css2 ? 1 : className += /submenu/.test(parentNode.className) ? ' ie6-SUBMENU-child' : '');
+	2:expression(this.ie6css2 = 1);
+}
+
+.columns.line-between .column p,
+.columns.line-between .column div
+{
+	1:expression(this.ie6css3 ? 1 : className += /column/.test(parentNode.className) ? ' ie6-COLUMN-child' : '');
+	2:expression(this.ie6css3 = 1);
+}
+
+.portlet-body
+{
+	1:expression(this.ie6css4 ? 1 : className += this == parentNode.firstChild ? ' portlet-body-ie6-first-child' : '');
+	2:expression(this.ie6css4 = 1);
+}
+
+fieldset.minimal legend
+{
+	display:none;
+}
+
+fieldset.minimal fieldset legend
+{
+	display:block;
+}
+
+/* IE6 doesn't recognise the adjacent sibling selector (+) */
+#banner h1.no-menu
+{
+	1:expression(this.ie6css4 ? 1 : parentNode.className += ' no-menu');
+	2:expression(this.ie6css4 = 1);
+}
+
+#user-information dt.ie6-first-child,
+.inline-navigation li.ie6-first-child
+{
+	border-left:none;
+	padding-left:0;
+}
+
+.columns.line-between .column.ie6-first-child
+{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+
+#main-menu li.first
+{
+	background:#066 url(/images/corner.gif) no-repeat top right;
+	color:#fff;
+	padding:.25em;
+	font-size:1.38em;
+	border:none;
+}
+
+.breadcrumb li.ie6-first-child
+{
+	background-image:none;
+	padding-left:0;
+	margin-left:0;
+	font-weight:bold;
+}
+
+table.default.statement tbody tr td.ie6-first-child
+{
+	border-top:1px solid #ccc;
+}
+
+#main-menu li.submenu a.ie6-SUBMENU-child
+{
+	background-image:url(/images/arrowDownBlack.gif);
+	padding-left:1.3em;
+	color:#000;
+}
+
+/* menu gap too large (whitespace in source bug) */
+#main-menu li a
+{
+	display:inline-block;
+}
+
+/*
+	Cannot use JS expression for .portlet-body > * because it is too slow when
+	selecting a lot of elements.
+*/
+.portlet-body *
+{
+	padding-right:.5em;
+	padding-left:.2em;
+}
+
+.portlet-body * *
+{
+	padding-right:0;
+	padding-left:0;
+}
+
+/* .catalogue > li */
+.catalogue li
+{
+	position:relative;
+	padding:.5em 25% .5em 0;
+	border-bottom:1px solid #ccc;
+	height:4.5em;
+}
+.catalogue li li
+{
+	padding:0;
+	border-bottom:none;
+	height:auto;
+	display:block;
+}
+.catalogue .composite .catalogue li
+{
+	padding-right:25%;
+}
+.catalogue .composite .catalogue li li
+{
+	padding-right:0;
+}
+
+.line-between .column p.ie6-COLUMN-child,
+.line-between .column div.ie6-COLUMN-child
+{
+	margin-left:1em;
+	margin-right:1em;
+}
+
+/* Undo Opera Fix */
+#user-information
+{
+	width:auto;
+}
+
+
+/* Forms */
+/* Question text is indented by 7px */
+legend .question
+{
+	left:9px;
+}
+/* Checkboxes not aligned */
+.field fieldset ul li
+{
+	margin-left:.25em;
+}
+.field ul label /* Checkbox and radio button labels */
+{
+	/* Nice wrapping - the IE way */
+	display:inline-block;
+	margin-left:0;
+
+	/* Undo normal label styling */
+	margin-right:.5em;
+
+	/* Too much space after labels */
+	padding-right:0;
+}
+/* Check boxes and radio buttons affect the line-height, making the text lower than the label. */
+input.checkbox,
+input.radio
+{
+	margin:0;
+}
+/* Currency symbol too far away from fields */
+.currency .field label
+{
+	left:.25em;
+}
+
+
+/* Read-only-forms are not wrapping properly. */
+.read-only-form
+{
+	width:98%;
+	margin:.5em 0;
+	padding:0;
+	padding-top:1em;
+}
+form .read-only-form
+{
+	margin:0;
+	padding-left:1%;
+}
+.two-columns .read-only-form
+{
+	width:96%;
+}
+.read-only-form dt
+{
+	float:none;
+	display:inline-block;
+	margin-top:-.25em;
+}
+.read-only-form dd
+{
+	float:right;
+	clear:right;
+	margin-top:-1.25em;
+	margin-bottom:1em;
+	padding-left:1.33em;
+}
+
+/* Read only forms nested in currency forms */
+.currency .read-only-form dt
+{
+	margin-left:.25em;
+}
+
+
+.catalogue .options
+{
+	padding-top:.5em; /* Align options with headings */
+}
+.catalogue .composite .catalogue .options
+{
+	padding-top:0; /* undo previous style if options are in a composite item */
+}
+/* Too much space between Known Fact term and definition. */
+.catalogue dt
+{
+	margin-right:0;
+}
+
+
+/* Index not rendered in a line */
+.index li
+{
+	display:inline;
+}
+/* Selected page rendered too high */
+.index.page-navigation li.selected
+{
+	margin-bottom:-8px;
+}
+
+
+/* Table header help icon position. */
+table.default thead th div a.help img
+{
+	right:1px;
+}
+
+
+/* Portlet Navigation - too much spacing. */
+.portlet-navigation a
+{
+	display:inline-block;
+}
+
+
+/* Process Overview too wide */
+.process-overview
+{
+	margin-right:-1em;
+}
+/* min-height is not supported, however, height behaves exactly like min-height in IE. */
+.process-overview dd
+{
+	height:29px;
+}
+
+
+/* Success & failure message needs padding */
+div.message
+{
+	padding-top:.75em;
+	padding-bottom:.75em;
+}
+
+/* Try to make the operand boxes all the same height */
+div.calculation dt,
+div.calculation dd
+{
+	height:2.5em;
+}
+/* Try to make large figures wrap gracefully to avoid the boxes wrapping. */
+div.calculation dd
+{
+	word-wrap:break-word;
+	line-height:1.6em;
+	padding-top:.7em;
+}
+
+form.calculation
+{
+	margin-top:-1em;
+}
+
+/* Don't set a width for the table of contents */
+div.table-of-contents
+{
+	width:auto;
+}
+
+
+/* Components that must clear others: */
+p,
+h2,
+h3,
+h4,
+form,
+fieldset,
+#header,
+#banner,
+#footer,
+.catalogue,
+.field,
+.buttons,
+.linear,
+.portlet,
+.columns,
+.index,
+.icon-list,
+.navigation,
+.portlet-navigation,
+.breadcrumb
+{
+	clear:both;
+}
+
+/* Exceptions to above. */
+.command p,
+.hint p
+{
+	clear:none;
+}
+
+/*
+	Subscript letters were overlapping keylines in h1 headings and being clipped
+	in form labels.
+*/
+sub
+{
+	vertical-align:baseline;
+	font-size:.9em;
+	position:relative;
+	top:2px;
+}
+
+
+/* Long descriptions had a strange wrapping bug. */
+dl.default dd
+{
+	display:inline-block;
+}
+
+
+/* Icon list icons are overlapping the content */
+.icon-list img
+{
+	margin-left:-2em;
+}
+
+
+/* Hint text in single-field form fields appears to the right of the field */
+.single-field .field
+{
+	position:relative;
+}
+.single-field .field .hint
+{
+	position:absolute;
+	left:-1.66em;
+	margin-top:2.75em;
+}
+
+.full-width .field ul li label
+{
+	display:inline-block;
+}
+
+/* Fieldsets contents too close to border */
+fieldset .field
+{
+	padding:0 1em;
+}
+
+.buttons input
+{
+	overflow:visible;
+	padding:0 .75em;
+}
+
+.field legend,
+.narrow-labels .field legend,
+.wide-labels .field legend
+{
+	width:auto;
+}
+
+/* Fieldset border too close to legend */
+.portlet-body legend
+{
+	padding-right:.33em;
+}
+
+/* Breadcrumb's image's are missing when wrapping */
+.breadcrumb li
+{
+	float:left;
+	white-space:nowrap;
+	background-position:0 .3em;
+	margin-left:.66em;
+}
+
+/* Portlets are too wide */
+.portlet {width:97%; margin-left:2.5%;}
+.two-columns .portlet {width:94.5%; margin-left:5%; margin-right:-1%;}
+.page-column .portlet {width:97%; margin-left:3%;}
+.page-column .two-columns .portlet {width:94.5%; margin-left:6%; margin-right:-1%;}
+
+/* IE6 Does not support border-radius */
+.portlet
+{
+	float:none;
+	position:relative;
+	overflow:visible;
+	padding-right:0;
+	padding-top:1.6em;
+}
+.portlet-header
+{
+	position:static;
+	width:100%;
+	height:20px;
+	margin-top:-1.6em;
+	padding-top:0;
+	background:#e1eeee;
+	padding-left:.2em;
+}
+.portlet.worksheet .portlet-header
+{
+	margin-top:-1.65em;
+}
+.portlet-body
+{
+	background:transparent url(/images/corner.gif) no-repeat top right;
+	position:relative;
+	top:-1px;
+	right:-1px;
+	padding-top:2em;
+	margin-top:-1.6em;
+}
+.portlet-body-ie6-first-child
+{
+	padding-top:1em;
+}
+/* Legacy HTML support */
+.no-title-bar .portlet-header h2
+{
+	position:absolute;
+	background:none;
+}
+
+/* Columns are sometimes wrapping. */
+div.columns div.column
+{
+	margin-left:-1px;
+	margin-right:-1px;
+}
+div.columns.line-between div.column
+{
+	margin-left:0;
+}
+
+/* Columns are adjacent to previous columns */
+div.columns
+{
+	margin-bottom:1.5em;
+}
+
+/* Portlet help icon positioning */
+.portlet-header a.help,
+.portlet a.help
+{
+	float:right;
+	margin-top:-1.25em;
+	margin-right:.6em;
+	z-index:2;
+	position:relative;
+}
+/* Undo */
+.portlet .portlet-body a.help
+{
+	float:none;
+	position:static;
+	z-index:0;
+}
+/* Adjust for portlet headings */
+.portlet-header h2 a.help
+{
+	margin-right:-1em;
+}
+
+.process-overview dt
+{
+	border:none;
+	background:url(/images/processStepOff.gif) no-repeat;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+.process-overview dt.selected
+{
+	background-image:url(/images/processStepOn.gif); /* Assume selected image is same size as default */
+	color:#fff;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+input.email      {width:22em;}
+
+.employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerEmployment.gif);}
+.self-employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerSelfEmployment.gif);}
+.partnership .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerPartnership.gif);}
+.property .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerProperty.gif);}
+.capital-gains .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCapitalGains.gif);}
+.foreign .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerForeign.gif);}
+.core .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCore.gif);}
+
+/* Information is too big for two-column layouts. */
+.two-columns DIV.message
+{
+	width:80%;
+}
+
+/* Text fields no longer wrap if we can help it */
+.wide-labels input.address,
+.wide-labels input.file,
+.wide-labels input.email,
+.wide-labels input.url,
+.wide-labels input.description
+{
+	width:30%;
+}
+
+input.description
+{
+	width:46%;
+}
+
+.narrow-labels input.description
+{
+	width:63%;
+}
+form div.error p.ie6-first-child,
+form .field div.information p.ie6-first-child,
+.portlet-body div.error p.ie6-first-child
+{
+	background:url(/images/errorIcon.gif) 0 .1em no-repeat;
+}
+
+/* Warning in portlet (outside of form) */
+div.warning
+{
+	background:transparent url(/images/warning.gif) 0 1em no-repeat;
+	border-width:0;
+	height:30px;
+}
+/* Fix what damage that does */
+div.message
+{
+	border-width:2px;
+	background-color:#fee;
+	padding-left:0.5em;
+}
+/* ...and fix what damage that does */
+div.success,
+div.note
+{
+	background-color:#efe;
+}
+div.note
+{
+	border-width:1px;
+}
+div.information
+{
+	background-color:transparent;
+	padding-left:40px;
+}
+div.success,
+div.failure
+{
+	padding-left:30px;
+}
+
+/* Small warning icon when in a form, on the 1st paragraph element, since we don't want to see icons unless there's content in the warning placeholder. */
+form div.warning
+{
+	background-image:none;
+	height:auto;
+}
+.portlet-body form div.warning p.ie6-first-child
+{
+	background:url(/images/warningIcon.gif) 0 0 no-repeat;
+}
+
+form .field div.information p.ie6-first-child
+{
+	background-image:url(/images/informationIcon.gif);
+	background-position:0 0;
+}
+#banner div.error p.ie6-first-child
+{
+	background:url(/images/error.gif) 0 1.25em no-repeat;
+	padding:1em 0 1em 50px;
+	min-height:36px;
+}
+
+#banner div.information p.ie6-first-child
+{
+	background:url(/images/information.gif) 0 1.25em no-repeat;
+	padding:1em 0 1em 50px;
+	min-height:24px;
+}
+.buttons
+{
+	padding-right:0;
+	padding-left:0;
+}
+.buttons input
+{
+	margin-right:0;
+	margin-left:.5em;
+}
+fieldset
+{
+	padding-top:1em;
+	width:93%;
+}
+.field fieldset
+{
+	width:100%;
+}
+
+/* Digital header links */
+#header ul,
+#header-digital
+{
+	list-style:none; /* Remove bullets */
+}
+#header li,
+#header-digital li
+{
+	display:inline;
+}

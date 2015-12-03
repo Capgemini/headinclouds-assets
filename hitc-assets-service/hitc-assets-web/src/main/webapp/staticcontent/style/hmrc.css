@@ -1,0 +1,249 @@
+/* Reset Styles */
+
+*
+{
+  margin:0;
+  padding:0;
+}
+
+a img
+{
+  border:0;
+}
+
+
+
+/* Default Styles */
+
+body
+{
+  background:#fff;
+  color:#000;
+  font:76%/1.2 Verdana,sans-serif; /* Font-sizes that don't break IE keylines on resizing (%): 66,71,72,76,85,88,89,90,92,99,100,101,110,113,114,119,120 */
+  width:63.25em; /* 770px @ Default IE Text-Size (Width of page in pixels * 6.243 / Verdana font-size in percent) */
+}
+
+a
+{
+  color:#063;
+  text-decoration:underline;
+}
+
+a:hover
+{
+  color:#f00!important;
+  text-decoration:underline!important;
+}
+
+ul li a
+{
+  text-decoration:none;
+}
+
+ul li p a
+{
+  text-decoration:underline;
+}
+
+ul li
+{
+  list-style:none;
+}
+
+
+
+/* headings */
+
+h3
+{
+  font-size: 1em;
+  color:#096;
+  padding-top:1em;
+  clear:both;
+}
+
+
+
+/* Paragraphs */
+
+p
+{
+  margin-top:.5em;
+  margin-bottom:1em;
+}
+
+p.new-section
+{
+  clear:both;
+  margin-top:2.5em;
+}
+
+
+
+/* Columns */
+
+div.columns
+{
+  clear:left;
+}
+
+div.columns div.column
+{
+  word-wrap:break-word;
+  float:left;
+}
+
+div.column.menu-column{width:22%;}
+div.column.page-column{width:78%;}
+div.column.quarter{width:25%;}
+div.column.three-quarter{width:75%}
+div.columns.two-columns div.column{width:50%;}
+
+div.column.groupheading-column{width:28%; text-align:right;}
+div.column.group-column{width:72%;}
+div.column.group-heading-column-left{width:28%; text-align:left;}
+
+div.column.menu-column,
+div.column.page-column,
+div.column.quarter,
+div.column.three-quarter,
+div.columns.two-columns div.column,
+div.column.groupheading-column,
+div.column.group-column,
+div.column.group-heading-column-left
+{
+  margin-right:-1px; /* IE */
+}
+
+
+
+/* Errors */
+
+div.error
+{
+  color:#f00;
+  background:url(/images/warningTriangleIcon.gif) no-repeat left .5em;
+  padding:.25em 0 .25em 25px;
+  height:100%; /* IE */
+}
+
+div.error a
+{
+  color:#f00;
+}
+
+div.error.large
+{
+  background:url(/images/warningTriangle.gif) left center no-repeat;
+  padding:1em 0 1em 40px;
+  height:auto; /* IE */
+
+}
+
+span.error 
+{
+  color:#f00;
+}
+
+span.fieldError 
+{
+  color:#f00;
+}
+
+button.next
+{
+  font-size:1.1em;
+  font-weight:bold;
+  background:url(/images/arrowRightCircle.gif) no-repeat right center;
+  padding-right:1em;
+  color:#096;
+  border:none
+}
+
+button.previous
+{
+  font-size:1.1em;
+  font-weight:bold;
+  background:url(/images/arrowLeftCircle.gif) no-repeat left center;
+  padding-left:1em;
+  color:#096;
+  border:none
+}
+
+/* Links */
+a.next
+{
+  font-size:1.1em;
+  font-weight:bold;
+  background:url(/images/arrowRightCircle.gif) no-repeat right center;
+  padding-right:1.5em;
+  color:#096;
+}
+
+a.previous
+{
+  font-size:1.1em;
+  font-weight:bold;
+  background:url(/images/arrowLeftCircle.gif) no-repeat left center;
+  padding-left:1.5em;
+  color:#096;
+}
+
+a.exit
+{
+  font-size:1.1em;
+  font-weight:bold;
+  padding-left:1.5em;
+  color:#096;
+}
+
+
+/* Hide content intended for screen readers */
+.screen-reader
+{
+  position:absolute;
+  top:-100em;
+  left:0; /* Suppresses unnecessary horizontal scrolling */
+}
+
+/* Alert */
+
+*.alert
+{
+  color:#f00;
+}
+
+
+
+/* Access Key */
+
+span.access-key
+{
+  text-decoration:underline;
+}
+
+
+/* Tick and Cross */
+
+span.standard-tick
+{
+  background:url(/images/standard_tick.gif) no-repeat top left;
+  width: 23px;
+  height: 20px;  
+  float:left;  
+}
+
+span.standard-cross
+{
+  background:url(/images/standard_cross.gif) no-repeat top left;
+  width: 20px;
+  height: 20px;  
+  float:left;  
+}
+
+/* Mandatory */
+
+span.mandatory
+{
+  color:#f00;
+}

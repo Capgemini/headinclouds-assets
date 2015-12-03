@@ -1,0 +1,63 @@
+/* IE8 Does not support border-radius */
+.portlet
+{
+	padding-top:0;
+	padding-right:0;
+}
+.portlet-header
+{
+	position:absolute;
+	width:100%;
+	margin-top:0;
+}
+.portlet-header + .portlet-body
+{
+	padding-top:2.5em;
+}
+.portlet-body
+{
+	background:url(/images/corner.gif) no-repeat top right;
+	position:relative;
+	top:-1px;
+	right:-1px;
+	margin-top:0;
+	padding-top:1em;
+}
+.portlet-body > *
+{
+	padding-right:.25em;
+}
+/* Legacy HTML support */
+.no-title-bar .portlet-header + .portlet-body
+{
+	padding-top:.5em;
+}
+
+#main-menu > li:first-child
+{
+	background:#066 url(/images/corner.gif) no-repeat top right;
+}
+
+.process-overview dt
+{
+	border:none;
+	background:url(/images/processStepOff.gif) no-repeat;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+.process-overview dt.selected
+{
+	background-image:url(/images/processStepOn.gif); /* Assume selected image is same size as default */
+	color:#fff;
+	width:29px;
+	height:29px;
+	line-height:28px;
+}
+.employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerEmployment.gif);}
+.self-employment .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerSelfEmployment.gif);}
+.partnership .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerPartnership.gif);}
+.property .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerProperty.gif);}
+.capital-gains .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCapitalGains.gif);}
+.foreign .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerForeign.gif);}
+.core .portlet-body {background-image:url(/images/selfAssessmentFiling/cornerCore.gif);}

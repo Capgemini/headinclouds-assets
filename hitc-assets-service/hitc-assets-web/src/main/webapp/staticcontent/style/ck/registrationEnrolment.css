@@ -1,0 +1,39 @@
+/* - - - - -
+	1: Gateway Card
+*/
+#gateway-card
+{
+	float:right;
+	position:relative;
+	width:160px;
+}
+
+#gateway-card dl
+{
+	margin:0;
+}
+
+#gateway-card dl dt
+{
+	position:absolute;
+	top:-1000em;
+	left:0;
+}
+
+#gateway-card dl dd
+{
+	position:absolute;
+	line-height:1em;
+	font-size:10px;
+	top:54px;
+	margin:0;
+	text-align:center;
+	width:160px;
+	font-weight:bold;
+	background:#fff;
+}
+
+#gateway-user-id
+{
+	width:48em;
+}
