@@ -14,6 +14,14 @@
 		<encode-session-id-in-query-params>false</encode-session-id-in-query-params>
 	</session-descriptor>
 
+ <container-descriptor>
+ 	<servlet-reload-check-secs>-1</servlet-reload-check-secs>
+ 	<prefer-web-inf-classes>false</prefer-web-inf-classes>
+ 	<prefer-application-packages>
+ 		<package-name>org.springframwork.*</package-name>
+	</prefer-application-packages>
+  </container-descriptor>
+  
 	<!-- Enable/Disable JSP re-loading depending on build mode. -->
 	<jsp-descriptor>
 		<page-check-seconds>@jsp.page.check.seconds@</page-check-seconds>
