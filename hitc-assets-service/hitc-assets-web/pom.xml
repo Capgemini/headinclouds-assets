@@ -19,6 +19,11 @@
 
 		<!-- Compile dependencies -->
 
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
 		
 		
 	</dependencies>	
