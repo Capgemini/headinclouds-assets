@@ -18,7 +18,7 @@
  	<servlet-reload-check-secs>-1</servlet-reload-check-secs>
  	<prefer-web-inf-classes>false</prefer-web-inf-classes>
  	<prefer-application-packages>
- 		<package-name>org.springframwork.*</package-name>
+ 		<package-name>org.springframework.*</package-name>
 	</prefer-application-packages>
   </container-descriptor>
   
